@@ -1,0 +1,138 @@
+{
+    "name": "Vibes",
+    "menuBackgroundImage": "https://github.com/greenmegapenguin/TCG-Arena-Vibes/blob/f53b3b9452144bfe5227e4a6323ebf3d760e68e9/images/assets/VibesTCG_Wallpaper.webp",
+    "deckBuilding": {
+        "mainFilters": [
+            "color",
+            "type",
+            "cost"
+        ],
+        "formats": [
+            {
+                "title": "Classic",
+                "gameplay": "Classic",
+                "legalityCode": "COR",
+                "deckRuleset": "Classic"
+            }
+        ],
+        "deckRulesets": {
+            "Classic": {
+                "general": {
+                    "min": 52,
+                    "maxPerCard": 4
+                }
+            }
+        }
+    },
+    "gameplay": {
+        "Classic": {
+            "mulligan": {
+                "startingHandSize": 5,
+                "mulliganCount": {
+                    "max": 1
+                },
+                "mulliganCycle": {
+                    "info": "You put as many as you want of the five cards in your hand to the bottom of your deck then draw the same number of new cards as you put down from the top of your deck.",
+                    "steps": [
+                        "toBottom",
+                        "draw"
+                    ]
+                }
+            },
+            "newTurn": {
+                "drawOnStart": true,
+                "sharedTurn": false
+            },
+            "countersStartingValues": [
+                0
+            ],
+            "hideFacedDownCards": true,
+            "sections": {
+                "customSections": [
+                    "Huddle",
+                    "Rods",
+                    "Relics"
+                ],
+                "layout": {
+                    "direction": "column",
+                    "content": [
+                        {
+                            "section": "Main"
+                        },
+                        {
+                            "direction": "row",
+                            "content": [
+                                {
+                                    "section": "Rods"
+                                },
+                                {
+                                    "section": "Relics"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "autoPlayFromHand": {
+                    "Action": "Stack",
+                    "Character": "Huddle",
+                    "Relic": "Relics",
+                    "Location": "Relics"
+                },
+                "autoPlayFromStack": {
+                    "Action": "Discard",
+                    "Character": "Huddle",
+                    "Item": "Relics",
+                    "Location": "Relics"
+                },
+                "sectionsDict": {
+                    "Stack": {
+                        "isDefaultSection": true,
+                        "title": "Stack",
+                        "isHidden": "no",
+                        "height": "HUGE",
+                        "alignment": "NONE",
+                        "isHorizontalAllowed": false,
+                        "isGroupForbidden": true,
+                        "displayedTitle": "Pile"
+                    },
+                    "Huddle": {
+                        "title": "Huddle",
+                        "isHidden": "no",
+                        "height": "MEDIUM",
+                        "alignment": "CENTER",
+                        "isHorizontalAllowed": true
+                    },
+                    "Rods": {
+                        "title": "Rods",
+                        "isHidden": "no",
+                        "height": "SMALL",
+                        "alignment": "START",
+                        "noAutoPayTo": "true",
+                        "isHorizontalAllowed": false,
+                        "displayedTitle": "Rods",
+                        "isGroupForbidden": true,
+                        "showHiddenCardInHistory": true,
+                        "logWhenPlayed": true
+                    },
+                    "Relics": {
+                        "title": "Relics",
+                        "isHidden": "no",
+                        "height": "SMALL",
+                        "alignment": "END",
+                        "isHorizontalAllowed": true
+                    }
+                }
+            }
+        }
+    },
+    "defaultRessources": {
+        "backgrounds": [],
+        "decksUrl": ""
+    },
+    "customHelp": "To put a card in your rods, drag and drop the card in the rods area.",
+    "cards": {
+        "dataUrl": "https://valcur.github.io/TCG-Arena-Lorcana/LorcanaCards.json",
+        "cardBack": "https://github.com/greenmegapenguin/TCG-Arena-Vibes/blob/f53b3b9452144bfe5227e4a6323ebf3d760e68e9/images/assets/Vibes%20TCG%20Card%20Back.webp",
+        "cardBackColor": "#0c0f15"
+    }
+}
